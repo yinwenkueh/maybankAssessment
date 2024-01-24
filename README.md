@@ -4,7 +4,7 @@ tries
 
 ## Step 0: Pre-requisite 
 ```bash
-Open .env file and input API KEY into PLACE_YOUR_OWN_API_KEY
+Open .env file and input GOOGLE MAP API KEY into PLACE_YOUR_OWN_API_KEY
 ```
 
 ## Step 1: Installation node module
