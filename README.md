@@ -1,27 +1,30 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# What's this
+Single page React Native application use Google Place Autocomplete to find places and show at map. Beside that must use redux to store result and display all searches that user.
+tries 
 
-# Getting Started
-
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
-
-## Step 1: Start the Metro Server
-
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
-
+## Step 0: Pre-requisite 
 ```bash
-# using npm
-npm start
+Open .env file and input API KEY into PLACE_YOUR_OWN_API_KEY
+```
+
+## Step 1: Installation node module
+```bash
+# using npm 
+npm install
 
 # OR using Yarn
-yarn start
+yarn add
+```
+
+## For iOS
+```bash
+#need to do pod install before start iOS application 
+cd iod
+pod install
+cd ../
 ```
 
 ## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
 ### For Android
 
 ```bash
@@ -41,39 +44,19 @@ npm run ios
 # OR using Yarn
 yarn ios
 ```
+## Demo Video 
+![ezgif-7-d1547ef4da](https://github.com/yinwenkueh/maybankAssessment/assets/128566871/1d65e0da-5f63-4526-8610-f1eb251c0a85)
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Screenshot 
+### Initial Page
+![Simulator Screenshot - iPhone SE (3rd generation) - 2024-01-24 at 15 11 19](https://github.com/yinwenkueh/maybankAssessment/assets/128566871/687cfd90-92a1-48f3-9e22-dcbe4a69372c)
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### Predefined Location
+![Simulator Screenshot - iPhone SE (3rd generation) - 2024-01-24 at 15 11 25](https://github.com/yinwenkueh/maybankAssessment/assets/128566871/890fb841-1843-47d5-b2d5-2dfa5c524ea5)
 
-## Step 3: Modifying your App
+### Search Place
+![Simulator Screenshot - iPhone SE (3rd generation) - 2024-01-24 at 15 11 50](https://github.com/yinwenkueh/maybankAssessment/assets/128566871/f4c55d8b-1337-4b3d-97b9-92adafeeea1c)
 
-Now that you have successfully run the app, let's modify it.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
