@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { RootState } from '../configs/store';
 import MapView, { Marker } from 'react-native-maps';
+import AutoCompleteComponent from './AutoCompleteComponent';
+import SearchResultsComponent from './SearchResultsComponent';
+import { SafeAreaView } from 'react-native';
 
 interface MapViewComponentProps {
     selectedLocation: {
@@ -12,21 +15,27 @@ interface MapViewComponentProps {
 }
 
 const MapViewComponent: React.FC<MapViewComponentProps> = ({ selectedLocation }) => {
-    if (!selectedLocation) {
-        return null
-    }
-
     return (
-        <MapView style={{ flex: 1 }} region={{ latitude: selectedLocation?.lat, longitude: selectedLocation?.lng, latitudeDelta: 0.0922, longitudeDelta: 0.0421 }}>
-            <Marker
-                coordinate={{
-                    latitude: selectedLocation?.lat,
-                    longitude: selectedLocation?.lng,
-                }}
-                title={selectedLocation?.description}
-                description="Selected Location"
-            />
-        </MapView>
+        <SafeAreaView style={{ flex: 1 }}>
+            {selectedLocation ?
+                <MapView
+                    style={{ flex: 1 }}
+                    region={{ latitude: selectedLocation?.lat, longitude: selectedLocation?.lng, latitudeDelta: 0.0922, longitudeDelta: 0.0421 }}>
+                    <Marker
+                        coordinate={{
+                            latitude: selectedLocation?.lat,
+                            longitude: selectedLocation?.lng,
+                        }}
+                        title={selectedLocation?.description}
+                        description="Selected Location"
+                    />
+                </MapView>
+                : null
+            }
+            <SearchResultsComponent />
+            <AutoCompleteComponent />
+        </SafeAreaView>
+
     );
 };
 
